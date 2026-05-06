@@ -2,31 +2,71 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
     <title>Serviços</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="logo">Responsivo</div>
-        <div class="menu-icon" onclick="toggleMenu()">
+        <div class="menu-icon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Abrir menu" onkeydown="if(event.key==='Enter' || event.key===' '){toggleMenu();}">
+
            <img src="menu_logo.png" alt="">
         </div>
-            <ul class=".links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="seviços.html">SERVIÇOS</a></li>
-                <li><a href="contatos.html">CONTATO</a></li>
-            </ul>
+
+        <ul class="links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="seviços.html">SERVIÇOS</a></li>
+            <li><a href="contatos.html">CONTATO</a></li>
+        </ul>
     </header>
 
-    <section class="servicos">
-        <h2>Nossos Serviços</h2>
-        <p>Oferecemos uma variedade de serviços para atender às suas necessidades. Entre em contato para saber mais sobre como podemos ajudar você.</p>
+    <section class="servicos" aria-labelledby="servicos-titulo">
+        <h2 id="servicos-titulo">Nossos Serviços</h2>
+        <p>
+            Oferecemos uma variedade de soluções para atender às suas necessidades. Se você quiser
+            tirar dúvidas ou solicitar um orçamento, fale conosco.
+        </p>
 
+        <div class="servicos-grid" role="list">
+            <article class="servico-card" role="listitem">
+                <h3>Websites Responsivos</h3>
+                <p>Layouts que se adaptam a celulares, tablets e desktops com boa usabilidade.</p>
+            </article>
+
+            <article class="servico-card" role="listitem">
+                <h3>Landing Pages</h3>
+                <p>Páginas focadas em conversão com estrutura clara e desempenho.</p>
+            </article>
+
+            <article class="servico-card" role="listitem">
+                <h3>UI/UX para Produtos</h3>
+                <p>Melhorias de interface e experiência do usuário com atenção aos detalhes.</p>
+            </article>
+
+            <article class="servico-card" role="listitem">
+                <h3>Manutenção e Ajustes</h3>
+                <p>Correções, melhorias e suporte contínuo para manter tudo funcionando bem.</p>
+            </article>
+
+            <article class="servico-card" role="listitem">
+                <h3>Design de Conteúdo</h3>
+                <p>Organização e hierarquia visual para textos ficarem mais fáceis de entender.</p>
+            </article>
+
+            <article class="servico-card" role="listitem">
+                <h3>Consultoria</h3>
+                <p>Orientação para você decidir as melhores práticas e próximos passos.</p>
+            </article>
+        </div>
     </section>
 
     <footer>
-        <p>&copy: 2026 - DevWeb</p>
+        <p>&copy; 2026 - DevWeb</p>
     </footer>
+
+    <script src="menu.js"></script>
 </body>
 </html>
+

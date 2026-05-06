@@ -2,18 +2,20 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
     <title>Exemplo Responsivo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="logo">Responsivo</div>
-        <div class="menu-icon" onclick="toggleMenu()">
+        <div class="menu-icon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Abrir menu" onkeydown="if(event.key==='Enter' || event.key===' '){toggleMenu();}">
+
            <img src="menu_logo.png" alt="">
         </div>
-            <ul class=".links">
-                <li><a href="index.html" >HOME</a></li>
+        <ul class="links">
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="seviços.html">SERVIÇOS</a></li>
                 <li><a href="contatos.html">CONTATO</a></li>
             </ul>

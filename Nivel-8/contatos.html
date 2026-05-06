@@ -2,32 +2,76 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+
+    <title>Contato</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="logo">Responsivo</div>
-        <div class="menu-icon" onclick="toggleMenu()">
+        <div class="menu-icon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Abrir menu" onkeydown="if(event.key==='Enter' || event.key===' '){toggleMenu();}">
+
            <img src="menu_logo.png" alt="">
         </div>
-            <ul class=".links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="seviços.html">SERVIÇOS</a></li>
-                <li><a href="contatos.html">CONTATO</a></li>
-            </ul>
+
+        <ul class="links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="seviços.html">SERVIÇOS</a></li>
+            <li><a href="contatos.html">CONTATO</a></li>
+        </ul>
     </header>
 
-    <section class="contatos">
-        <h2>Contatos</h2>
-        <p>Entre em contato conosco para mais informações ou para solicitar nossos serviços. Estamos disponíveis para atender suas necessidades e responder a quaisquer perguntas que você possa ter.</p>
-        <p>Numero de contato: (47)9999.9999</p>
-        <p>Email: Contatos@gmail.com</p> 
+    <section class="contatos" aria-labelledby="contato-titulo">
+        <h2 id="contato-titulo">Contato</h2>
+
+        <div class="info-contato" aria-label="Informações de contato">
+            <div class="info-item">
+                <strong>Telefone</strong>
+                <div>
+                    <a href="tel:+5547999999999">(47) 9999-9999</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <strong>E-mail</strong>
+                <div>
+                    <a href="mailto:contatos@gmail.com">contatos@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <form aria-label="Formulário de contato">
+            <label>
+                <div>Seu nome</div>
+                <input type="text" name="nome" autocomplete="name" placeholder="Digite seu nome" required>
+            </label>
+
+            <label>
+                <div>Seu e-mail</div>
+                <input type="email" name="email" autocomplete="email" placeholder="Digite seu e-mail" required>
+            </label>
+
+            <label>
+                <div>Assunto</div>
+                <input type="text" name="assunto" placeholder="Ex: Orçamento / Dúvida" required>
+            </label>
+
+            <label>
+                <div>Mensagem</div>
+                <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+            </label>
+
+            <button type="submit">Enviar mensagem</button>
+        </form>
     </section>
 
     <footer>
-        <p>&copy: 2026 - DevWeb</p>
+        <p>&copy; 2026 - DevWeb</p>
     </footer>
+
+    <script src="menu.js"></script>
 </body>
 </html>
+
